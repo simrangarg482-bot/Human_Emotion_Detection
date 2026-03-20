@@ -1,0 +1,64 @@
+# ----------------------
+# Python cache files
+# ----------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ----------------------
+# Virtual environments
+# ----------------------
+venv/
+env/
+.venv/
+
+# ----------------------
+# Jupyter Notebook checkpoints
+# ----------------------
+.ipynb_checkpoints/
+
+# ----------------------
+# Data files (IMPORTANT)
+# ----------------------
+data/
+*.csv
+*.xlsx
+
+# If you want to keep sample data, comment above and use:
+# !data/sample.csv
+
+# ----------------------
+# Model files (large + unnecessary for git)
+# ----------------------
+*.h5
+*.weights.h5
+*.pkl
+
+# ----------------------
+# Logs
+# ----------------------
+*.log
+
+# ----------------------
+# OS files
+# ----------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------
+# IDE files
+# ----------------------
+.vscode/
+.idea/
+
+# ----------------------
+# Streamlit
+# ----------------------
+.streamlit/
+
+# ----------------------
+# Temporary files
+# ----------------------
+*.tmp
+*.bak
