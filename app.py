@@ -35,8 +35,12 @@ user_input = st.text_area(
 def load_model_and_tokenizer():
     
     # Load tokenizer
-    with open("tokenizer.pkl", "rb") as f:
-        tokenizer = pickle.load(f)
+    from tensorflow.keras.preprocessing.text import tokenizer_from_json
+
+    with open("tokenizer.json") as f:
+         data = f.read()
+
+         tokenizer = tokenizer_from_json(data)
 
     # Build model (same architecture as training)
     model = build_model(vocab_size=10000, input_length=30, num_classes=6)

@@ -136,10 +136,10 @@ recommendations_df.to_csv("recommendations.csv", index=False)
 print("Saved recommendations.csv")
 
 # ------------------ SAVE TOKENIZER ------------------
-with open("tokenizer.pkl", "wb") as f:
-    pickle.dump(tokenizer, f)
+tokenizer_json = tokenizer.to_json()
 
-print("Saved tokenizer.pkl")
+with open("tokenizer.json", "w") as f:
+    f.write(tokenizer_json)
 
 # ------------------ SAVE MODEL ------------------
 model.save_weights("model.weights.h5")
