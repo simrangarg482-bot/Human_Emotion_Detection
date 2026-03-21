@@ -142,8 +142,8 @@ with open("tokenizer.json", "w") as f:
     f.write(tokenizer_json)
 
 # ------------------ SAVE MODEL ------------------
-model.save_weights("model.weights.h5")
-print("Saved model.weights.h5")
+model.save("model.h5")   # ✅ FULL MODEL (architecture + weights)
+print("Saved model.h5")
 
 # ------------------ SAVE LABEL ENCODER ------------------
 with open("label_encoder.pkl", "wb") as f:

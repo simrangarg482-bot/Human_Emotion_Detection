@@ -43,10 +43,9 @@ def load_model_and_tokenizer():
          tokenizer = tokenizer_from_json(data)
 
     # Build model (same architecture as training)
-    model = build_model(vocab_size=10000, input_length=30, num_classes=6)
-    
-    # IMPORTANT: correct file name
-    model.load_weights("model.weights.h5")
+    from tensorflow.keras.models import load_model
+
+    model = load_model("model.h5")
 
     return model, tokenizer
 
