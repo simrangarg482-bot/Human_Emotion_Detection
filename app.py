@@ -63,13 +63,11 @@ if st.button("🔍 Analyze Emotion"):
         temp_df, _, _ = preprocess(temp_df, is_train=False)
 
         # -------- TOKENIZE --------
-        seq = tokenizer.texts_to_sequences(temp_df['journal_text'])
-        padded = pad_sequences(seq, maxlen=30, padding='post')
 
         # -------- PREDICT --------
         # -------- TOKENIZE --------
         seq = tokenizer.texts_to_sequences(temp_df['journal_text'])
-        padded = pad_sequences(seq, maxlen=30, padding='post')
+        padded = pad_sequences(seq, maxlen=50, padding='post')
 
         # -------- PREDICT --------
         preds = model.predict(padded)
